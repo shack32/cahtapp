@@ -43,7 +43,7 @@ class UserFireStore {
       final snapshot = await _userCollection.doc(uid).get();
       User user = User(
           name: snapshot.data()!['name'],
-          imagePath: snapshot.data()!['imaga_path'],
+          imagePath: snapshot.data()!['image_path'],
           uid: uid);
       return user;
     } catch (e) {
